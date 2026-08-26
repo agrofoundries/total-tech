@@ -1,0 +1,255 @@
+.footerSection {
+  background: #0A2556;
+  color: #FFFFFF;
+  padding: 68px 4vw 40px;
+  font-family: var(--font-body);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.footerTopRow {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.3fr;
+  gap: 44px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 44px;
+}
+
+.footerBrandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footerLogoContainer {
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.footerBrandDesc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 320px;
+  margin: 0;
+}
+
+.footerDedicatedCol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  text-align: center;
+}
+
+.dedicatedHeading {
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  max-width: 300px;
+}
+
+.groupBadge {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  padding: 5px 12px;
+  font-size: 10.5px;
+  font-weight: 700;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  transition: all 0.15s ease;
+}
+
+.groupBadge:hover {
+  background: var(--blue-500);
+  border-color: var(--blue-500);
+}
+
+.footerOfficesCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.socialRow {
+  display: flex;
+  gap: 8px;
+}
+
+.socialBtn {
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.socialBtn:hover {
+  background: #FFFFFF;
+  color: #0A2556;
+  border-color: #FFFFFF;
+}
+
+.officeGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-end;
+  text-align: right;
+  width: 100%;
+}
+
+.officeItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.officeTitle {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  font-family: var(--font-heading);
+}
+
+.officeAddr {
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+  font-family: var(--font-mono);
+}
+
+.officePhone {
+  font-size: 11px;
+  color: var(--blue-300);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  transition: all 0.15s ease;
+}
+
+.officePhone:hover {
+  color: #FFFFFF;
+}
+
+.footerLinkColumns {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.columnHeader {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading);
+}
+
+.columnSquare {
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  background: var(--blue-300);
+  display: inline-block;
+}
+
+.columnList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 0;
+  margin: 0;
+}
+
+.columnLink {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.columnLink span {
+  color: var(--blue-300);
+  font-weight: 600;
+}
+
+.columnLink:hover {
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 1024px) {
+  .footerTopRow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footerOfficesCol {
+    align-items: flex-start;
+  }
+  .officeGrid {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .footerLinkColumns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .footerLinkColumns {
+    grid-template-columns: 1fr;
+  }
+  .footerBottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

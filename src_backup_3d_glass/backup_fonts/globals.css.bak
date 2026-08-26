@@ -1,0 +1,104 @@
+:root {
+  /* =========================================================================
+     TOTAL TECH DESIGN SYSTEM: MULTIPLE SHADES OF LOGO BLUE + ITRANSITION TYPOGRAPHY
+     ========================================================================= */
+  
+  /* Multiple Shades of Logo Blue */
+  --blue-900: #071530;       /* Deepest Corporate Navy (Footer, Topbar) */
+  --blue-800: #0A1938;       /* Primary Navy Surface */
+  --blue-700: #0E2856;       /* Elevated Navy Card */
+  --blue-600: #003E99;       /* Deep Royal Blue */
+  --blue-500: #0052CC;       /* Primary Logo Cobalt/Royal Blue ("TOTAL") */
+  --blue-400: #0070F3;       /* Electric Bright Blue */
+  --blue-300: #00A3FF;       /* Logo Sky/Cyan Blue ("TECH") */
+  --blue-200: #70C0FF;       /* Soft Light Blue */
+  --blue-100: #D8ECFC;       /* Ice Blue Accent */
+  --blue-50:  #F0F6FC;       /* Softest Ice Background */
+  
+  /* Brand Semantic Bindings */
+  --color-brand-dark: var(--blue-800);
+  --color-brand-navy: var(--blue-700);
+  --color-brand-primary: var(--blue-500);
+  --color-brand-accent: var(--blue-300);
+  --color-brand-cyan: var(--blue-300);
+  
+  /* Surface Tokens */
+  --bg-main: #FFFFFF;
+  --bg-subtle: var(--blue-50);
+  --bg-ice: #E6F1FC;
+  --bg-dark-surface: var(--blue-800);
+  --bg-dark-card: var(--blue-700);
+  --bg-dark-elevated: #143570;
+  
+  /* Font / Text Tokens (Crisp Black & Charcoal) */
+  --color-text-title: #0A0F1D;     /* Sharp Deep Black for Headings */
+  --color-text-body: #1E293B;      /* Crisp Dark Slate Black for Body */
+  --color-text-muted: #475569;     /* Medium Dark Gray for Secondary Copy */
+  --color-text-inverse: #FFFFFF;
+  --color-text-inverse-muted: #94A3B8;
+  
+  /* Blue-Tinted Sharp Borders */
+  --border-subtle: #D8E5F3;
+  --border-strong: #B4CEE8;
+  --border-dark: rgba(0, 163, 255, 0.2);
+  --border-active: var(--blue-500);
+  
+  /* Typography: Geometric Sans + Itransition's Sometype Mono */
+  --font-heading: "Aeonik Pro", "AeonikProVariableFont", "November", var(--font-corporate), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Aeonik Pro", "AeonikProVariableFont", "November", var(--font-corporate), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-sometype-mono), "Sometype Mono", "November Mono", "Space Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 !important; /* Strict 0px square precision everywhere */
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-main);
+  color: var(--color-text-body);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.03em;
+  color: var(--color-text-title);
+}
+
+button, input, select, textarea {
+  font-family: var(--font-body);
+  border-radius: 0 !important;
+}
+
+::selection {
+  background: var(--blue-500);
+  color: #FFFFFF;
+}
+
+/* Custom Sharp Scrollbar in Multiple Blue Shades */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--blue-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue-800);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-500);
+}

@@ -1,0 +1,104 @@
+:root {
+  /* =========================================================================
+     TOTAL TECH DESIGN SYSTEM: SWISS NEO-GROTESQUE (INTER) & LOGO BLUE PALETTE
+     ========================================================================= */
+
+  /* Authentic Shades of Logo Blue (0% Black) */
+  --blue-900: #0E2856;       /* Visible Rich Royal Navy */
+  --blue-800: #0A3570;       /* Rich Deep Blue */
+  --blue-700: #003E99;       /* Deep Royal Blue ("TOTAL") */
+  --blue-600: #0047B3;       /* Bold Royal Blue */
+  --blue-500: #0052CC;       /* Primary Logo Cobalt/Royal Blue */
+  --blue-400: #0070F3;       /* Bright Blue */
+  --blue-300: #00A3FF;       /* Sky/Cyan Blue ("TECH") */
+  --blue-200: #70C0FF;       /* Soft Light Blue */
+  --blue-100: #D8ECFC;       /* Ice Blue Accent */
+  --blue-50:  #F2F7FC;       /* Softest Ice Background */
+  
+  /* Brand Semantic Bindings */
+  --color-brand-primary: var(--blue-500);
+  --color-brand-accent: var(--blue-300);
+  --color-brand-navy: var(--blue-700);
+  
+  /* Surface Tokens */
+  --bg-main: #FFFFFF;
+  --bg-subtle: var(--blue-50);
+  --bg-ice: #E8F2FC;
+  --bg-card: #FFFFFF;
+  
+  /* 100% Visibly Blue Typography (No Black) */
+  --color-text-title: #0A3570;     /* Visibly Deep Royal Blue for Headings */
+  --color-text-body: #1E467A;      /* Visibly Rich Slate Blue for Body */
+  --color-text-muted: #3B6699;     /* Medium Soft Blue */
+  --color-text-light: #5A85BA;
+  
+  /* Blue-Tinted Sharp Precision Borders */
+  --border-subtle: #D2E4F7;
+  --border-strong: #A8CEF4;
+  --border-active: var(--blue-500);
+  
+  /* Exact Neo-Grotesque Typography Stack */
+  --font-heading: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 !important; /* Strict 0px square precision everywhere */
+  font-family: var(--font-heading);
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-main);
+  color: var(--color-text-body);
+  font-family: var(--font-body) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+/* Exact Reference Title Typography: Flat terminals, tight tracking, natural weight */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1.15 !important;
+  color: var(--color-text-title);
+  font-weight: 550 !important;
+  text-transform: none !important;
+}
+
+button, input, select, textarea {
+  font-family: var(--font-body) !important;
+  border-radius: 0 !important;
+}
+
+::selection {
+  background: var(--blue-500);
+  color: #FFFFFF;
+}
+
+/* Custom Sharp Scrollbar in Multiple Blue Shades */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--blue-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue-500);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-700);
+}

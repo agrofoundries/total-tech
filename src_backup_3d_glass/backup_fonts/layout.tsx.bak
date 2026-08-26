@@ -1,0 +1,42 @@
+import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, Sometype_Mono } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+
+// Primary Geometric Corporate Sans (Accenture / Itransition Standard)
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-corporate",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+// Sometype Mono - Official Technical Monospace Font from Itransition
+const sometypeMono = Sometype_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sometype-mono",
+  weight: ["400", "500", "700"],
+});
+
+export const metadata: Metadata = {
+  title: "Total Tech Technologies | Global Enterprise IT Consulting",
+  description: "End-to-end enterprise IT architecture, sovereign software engineering, AI, robotics, and cloud systems.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${plusJakarta.variable} ${sometypeMono.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <Header />
+        <main style={{ minHeight: '100vh' }}>
+          {children}
+        </main>
+      </body>
+    </html>
+  );
+}

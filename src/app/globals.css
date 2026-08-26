@@ -41,13 +41,22 @@
   --font-heading: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  /* Modern Glassmorphism & 3D Lighting Tokens */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-hover: rgba(255, 255, 255, 0.88);
+  --glass-bg-subtle: rgba(242, 247, 252, 0.65);
+  --glass-border: rgba(210, 228, 247, 0.6);
+  --glass-border-glow: rgba(0, 112, 243, 0.4);
+  --glass-blur: blur(16px);
+  --glass-shadow: 0 20px 40px -15px rgba(0, 82, 204, 0.08), 0 0 1px 1px rgba(255, 255, 255, 0.9) inset;
+  --glass-shadow-hover: 0 25px 50px -12px rgba(0, 82, 204, 0.18), 0 0 1px 1px rgba(255, 255, 255, 1) inset;
+  --glass-shadow-3d: 0 30px 60px -12px rgba(0, 62, 153, 0.16), 0 10px 20px -5px rgba(0, 163, 255, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  border-radius: 0 !important; /* Strict 0px square precision everywhere */
   font-family: var(--font-heading);
 }
 
@@ -81,7 +90,6 @@ h1, h2, h3, h4, h5, h6 {
 
 button, input, select, textarea {
   font-family: var(--font-body) !important;
-  border-radius: 0 !important;
 }
 
 ::selection {
@@ -98,7 +106,38 @@ button, input, select, textarea {
 }
 ::-webkit-scrollbar-thumb {
   background: var(--blue-500);
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--blue-700);
+}
+
+/* 3D and Ambient Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes shimmerGlass {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
